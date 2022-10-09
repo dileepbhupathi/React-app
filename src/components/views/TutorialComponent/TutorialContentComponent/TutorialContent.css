@@ -27,3 +27,8 @@ h3 {
 img {
     display: block;
 }
+
+.tutorial-content-high-description {
+    font-size: 20px;
+    color: #6B6B6B;
+}

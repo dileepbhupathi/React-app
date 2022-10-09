@@ -112,8 +112,16 @@ export const TutorialContent = () => {
                       ))}
                     </code>
                   ) : null}
-                  {item.tipdescription1a ? <p>{item.tipdescription1a}</p> : null}
+                  {item.tipdescription1a ? (
+                    <p>{item.tipdescription1a}</p>
+                  ) : null}
                 </div>
+              ) : null}
+
+              {item.highdescription ? (
+                <p className="tutorial-content-high-description">
+                  {item.highdescription}
+                </p>
               ) : null}
 
               {item.code1 ? (
@@ -122,6 +130,12 @@ export const TutorialContent = () => {
                     <pre>{code}</pre>
                   ))}
                 </code>
+              ) : null}
+
+              {item.highdescription1 ? (
+                <p className="tutorial-content-high-description">
+                  {item.highdescription1}
+                </p>
               ) : null}
 
               {item.code1a ? (
@@ -133,6 +147,12 @@ export const TutorialContent = () => {
               ) : null}
 
               {item.description2 ? <p>{item.description2}</p> : null}
+
+              {item.highdescription2 ? (
+                <p className="tutorial-content-high-description">
+                  {item.highdescription2}
+                </p>
+              ) : null}
 
               {item.code2 ? (
                 <code className="tutorial-content-code-container">
@@ -163,6 +183,12 @@ export const TutorialContent = () => {
               ) : null}
 
               {item.description3 ? <p>{item.description3}</p> : null}
+
+              {item.highdescription3 ? (
+                <p className="tutorial-content-high-description">
+                  {item.highdescription3}
+                </p>
+              ) : null}
 
               {item.tipheader3 ? (
                 <div className="doc-content-tip-container">
@@ -208,7 +234,7 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-{item.tipheader4 ? (
+              {item.tipheader4 ? (
                 <div className="doc-content-tip-container">
                   <h4>{item.tipheader4}</h4>
                   <p>{item.tipdescription4}</p>
@@ -216,7 +242,14 @@ export const TutorialContent = () => {
               ) : null}
 
               {item.srcfile ? <img src={item.srcfile} alt="" /> : null}
+
               {item.description5 ? <p>{item.description5}</p> : null}
+
+              {item.highdescription4 ? (
+                <p className="tutorial-content-high-description">
+                  {item.highdescription4}
+                </p>
+              ) : null}
 
               {item.code5 ? (
                 <code className="tutorial-content-code-container">
@@ -245,6 +278,12 @@ export const TutorialContent = () => {
               ) : null}
               {item.description6 ? <p>{item.description6}</p> : null}
 
+              {item.tipwarningheader ? (
+                <div className="doc-content-tip-container">
+                  <h4>{item.tipwarningheader}</h4>
+                </div>
+              ) : null}
+
               {item.code6 ? (
                 <code className="tutorial-content-code-container">
                   {item.code6.map((code) => (
@@ -253,7 +292,6 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-              
               {item.description7 ? <p>{item.description7}</p> : null}
 
               {item.code7 ? (
@@ -264,11 +302,10 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-{item.tipheader7 ? (
+              {item.tipheader7 ? (
                 <div className="doc-content-tip-container">
                   <h4>{item.tipheader7}</h4>
                   <p>{item.tipdescription7}</p>
-                  
                 </div>
               ) : null}
 
@@ -302,7 +339,7 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-{item.tipheader10 ? (
+              {item.tipheader10 ? (
                 <div className="doc-content-tip-container">
                   <h4>{item.tipheader10}</h4>
                   <p>{item.tipdescription10}</p>
@@ -343,7 +380,7 @@ export const TutorialContent = () => {
                 </>
               ) : null}
 
-{item.tipHeader13 ? (
+              {item.tipHeader13 ? (
                 <div className="doc-content-tip-container">
                   <h4>{item.tipHeader13}</h4>
                   <p>{item.tipDescription13}</p>
