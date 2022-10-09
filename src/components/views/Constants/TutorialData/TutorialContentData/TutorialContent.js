@@ -190,9 +190,9 @@ export const TutorialContentData = [
             '}'
         ],
         description1 : 'If you click on a Square now, you should see ‘click’ in your browser’s devtools console.',
-        tipheader  : 'Note',
-        tipdescription : 'To save typing and avoid the confusing behavior of this, we will use the arrow function syntax for event handlers here and further below:',
-        tipcode : [
+        tipheader1  : 'Note',
+        tipdescription1 : 'To save typing and avoid the confusing behavior of this, we will use the arrow function syntax for event handlers here and further below:',
+        tipcode1 : [
             'class Square extends React.Component {',
             '   render() {',
             '       return (',
@@ -203,7 +203,7 @@ export const TutorialContentData = [
             '   }',
             '}'
         ],
-        tipdescription1 : 'Notice how with onClick={() => console.log("click")}, we’re passing a function as the onClick prop. React will only call this function after a click. Forgetting () => and writing onClick={console.log("click")} is a common mistake, and would fire every time the component re-renders.',
+        tipdescription1a : 'Notice how with onClick={() => console.log("click")}, we’re passing a function as the onClick prop. React will only call this function after a click. Forgetting () => and writing onClick={console.log("click")} is a common mistake, and would fire every time the component re-renders.',
         description2 : 'As a next step, we want the Square component to “remember” that it got clicked, and fill it with an “X” mark. To “remember” things, components use state.',
         description3 : 'React components can have state by setting this.state in their constructors. this.state should be considered as private to a React component that it’s defined in. Let’s store the current value of the Square in this.state, and change it when the Square is clicked.',
         description4 : 'First, we’ll add a constructor to the class to initialize the state:',
@@ -224,8 +224,8 @@ export const TutorialContentData = [
             '   }',
             '}'
         ],
-        tipHeader : 'Note',
-        tipDescription : 'In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.',
+        tipheader4 : 'Note',
+        tipdescription4 : 'In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.',
         description5 : 'Now we’ll change the Square’s render method to display the current state’s value when clicked:',
         Ulist2 : [
             'Replace this.props.value with this.state.value inside the <button> tag.',
@@ -333,8 +333,8 @@ export const TutorialContentData = [
             '   );',
             '}'
         ],
-        tipheader : 'Note',
-        tipdescription : 'We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn’t insert a semicolon after return and break our code.',
+        tipheader10 : 'Note',
+        tipdescription10 : 'We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn’t insert a semicolon after return and break our code.',
         description11 : 'Now we’re passing down two props from Board to Square: value and onClick. The onClick prop is a function that Square can call when clicked. We’ll make the following changes to Square:',
         Ulist3 : [
             'Replace this.state.value with this.props.value in Square’s render method',
@@ -364,8 +364,8 @@ export const TutorialContentData = [
             '4. Since the Board passed onClick={() => this.handleClick(i)} to Square, the Square calls the Board’s handleClick(i) when clicked.',
             '5. We have not defined the handleClick() method yet, so our code crashes. If you click a square now, you should see a red error screen saying something like “this.handleClick is not a function”.'
         ],
-        tipHeader : 'Note',
-        tipDescription : 'The DOM <button> element’s onClick attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square’s onClick prop or Board’s handleClick method, and the code would work the same. In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.',
+        tipHeader13 : 'Note',
+        tipDescription13 : 'The DOM <button> element’s onClick attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square’s onClick prop or Board’s handleClick method, and the code would work the same. In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.',
         description14 : 'When we try to click a Square, we should get an error because we haven’t defined handleClick yet. We’ll now add handleClick to the Board class:',
         code14 : [
             'class Board extends React.Component {',
@@ -464,8 +464,8 @@ export const TutorialContentData = [
         ],
         description3 : 'We have changed this.props to props both times it appears.',
         header3 : 'View the full code at this point',
-        tipheader : 'Note',
-        tipdescription : 'When we modified the Square to be a function component, we also changed onClick={() => this.props.onClick()} to a shorter onClick={props.onClick} (note the lack of parentheses on both sides).'
+        tipheader3 : 'Note',
+        tipdescription3 : 'When we modified the Square to be a function component, we also changed onClick={() => this.props.onClick()} to a shorter onClick={props.onClick} (note the lack of parentheses on both sides).'
     },
     {
         id : 19,
@@ -813,8 +813,8 @@ export const TutorialContentData = [
             "   });",
             " }",
         ],
-        tipheader : 'Note',
-        tipdescription : 'Unlike the array push() method you might be more familiar with, the concat() method doesn’t mutate the original array, so we prefer it.',
+        tipheader7 : 'Note',
+        tipdescription7 : 'Unlike the array push() method you might be more familiar with, the concat() method doesn’t mutate the original array, so we prefer it.',
         description8 : 'At this point, the Board component only needs the renderSquare and render methods. The game’s state and the handleClick method should be in the Game component.',
         header3 : 'View the full code at this point'
     },
