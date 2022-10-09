@@ -25,21 +25,21 @@ export const TutorialContent = () => {
 
               {item.description ? <p>{item.description}</p> : null}
 
-              {item.code4 ? (
+              {item.code ? (
                 <code className="tutorial-content-code-container">
-                  {item.code4.map((code) => (
+                  {item.code.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
               ) : null}
 
-              {item.code21 ? (
+              {/* {item.code21 ? (
                 <code className="tutorial-content-code-container">
                   {item.code21.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.Ulist4 ? (
                 <>
@@ -118,23 +118,23 @@ export const TutorialContent = () => {
 
               {item.description1 ? <p>{item.description1}</p> : null}
 
-              {item.code ? (
+              {item.code1 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code.map((code) => (
+                  {item.code1.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
               ) : null}
 
-              {item.code14 ? (
+              {item.code1a ? (
                 <code className="tutorial-content-code-container">
-                  {item.code14.map((code) => (
+                  {item.code1a.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
               ) : null}
 
-              {item.code15 ? (
+              {/* {item.code15 ? (
                 <code className="tutorial-content-code-container">
                   {item.code15.map((code) => (
                     <pre>{code}</pre>
@@ -166,7 +166,7 @@ export const TutorialContent = () => {
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.description2 ? <p>{item.description2}</p> : null}
 
@@ -178,7 +178,7 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-              {item.code16 ? (
+              {/* {item.code16 ? (
                 <code className="tutorial-content-code-container">
                   {item.code16.map((code) => (
                     <pre>{code}</pre>
@@ -224,7 +224,7 @@ export const TutorialContent = () => {
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.Olist ? (
                 <>
@@ -255,7 +255,7 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-              {item.code7 ? (
+              {/* {item.code7 ? (
                 <code className="tutorial-content-code-container">
                   {item.code7.map((code) => (
                     <pre>{code}</pre>
@@ -285,7 +285,7 @@ export const TutorialContent = () => {
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.Olist2 ? (
                 <>
@@ -308,15 +308,15 @@ export const TutorialContent = () => {
               ) : null}
 
               {item.description4 ? <p>{item.description4}</p> : null}
-              {item.code1 ? (
+              {item.code4 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code1.map((code) => (
+                  {item.code4.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
               ) : null}
 
-              {item.code5 ? (
+              {/* {item.code5 ? (
                 <code className="tutorial-content-code-container">
                   {item.code5.map((code) => (
                     <pre>{code}</pre>
@@ -370,7 +370,7 @@ export const TutorialContent = () => {
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.tipHeader ? (
                 <div className="doc-content-tip-container">
@@ -381,15 +381,15 @@ export const TutorialContent = () => {
               {item.srcfile ? <img src={item.srcfile} alt="" /> : null}
               {item.description5 ? <p>{item.description5}</p> : null}
 
-              {item.code9 ? (
+              {item.code5 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code9.map((code) => (
+                  {item.code5.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
               ) : null}
 
-              {item.code20 ? (
+              {/* {item.code20 ? (
                 <code className="tutorial-content-code-container">
                   {item.code20.map((code) => (
                     <pre>{code}</pre>
@@ -411,7 +411,7 @@ export const TutorialContent = () => {
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.Ulist2 ? (
                 <>
@@ -440,37 +440,37 @@ export const TutorialContent = () => {
                 </code>
               ) : null}
 
-              {item.code28 ? (
+              {/* {item.code28 ? (
                 <code className="tutorial-content-code-container">
                   {item.code28.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.description7 ? <p>{item.description7}</p> : null}
 
-              {item.code10 ? (
+              {item.code7 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code10.map((code) => (
+                  {item.code7.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
               ) : null}
 
-              {item.code29 ? (
+              {/* {item.code29 ? (
                 <code className="tutorial-content-code-container">
                   {item.code29.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
-              ) : null}
+              ) : null} */}
 
               {item.description8 ? <p>{item.description8}</p> : null}
 
-              {item.code38 ? (
+              {item.code8 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code38.map((code) => (
+                  {item.code8.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
@@ -478,9 +478,9 @@ export const TutorialContent = () => {
 
               {item.description9 ? <p>{item.description9}</p> : null}
 
-              {item.code39 ? (
+              {item.code9 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code39.map((code) => (
+                  {item.code9.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
@@ -488,9 +488,9 @@ export const TutorialContent = () => {
 
               {item.description10 ? <p>{item.description10}</p> : null}
 
-              {item.code11 ? (
+              {item.code10 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code11.map((code) => (
+                  {item.code10.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>
@@ -532,9 +532,9 @@ export const TutorialContent = () => {
 
               {item.description14 ? <p>{item.description14}</p> : null}
 
-              {item.code13 ? (
+              {item.code14 ? (
                 <code className="tutorial-content-code-container">
-                  {item.code13.map((code) => (
+                  {item.code14.map((code) => (
                     <pre>{code}</pre>
                   ))}
                 </code>

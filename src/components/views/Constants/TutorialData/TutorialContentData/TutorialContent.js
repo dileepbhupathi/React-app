@@ -97,7 +97,7 @@ export const TutorialContentData = [
         header1 : 'What Is React?',
         description : 'React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.',
         description1 : 'React has a few different kinds of components, but we’ll start with React.Component subclasses:',
-        code : [
+        code1 : [
                     'class ShoppingList extends React.Component {',
                     '   render() {',
                     '       return (',
@@ -118,7 +118,7 @@ export const TutorialContentData = [
         description2 : 'We’ll get to the funny XML-like tags soon. We use components to tell React what we want to see on the screen. When our data changes, React will efficiently update and re-render our components.',
         description3 : 'Here, ShoppingList is a React component class, or React component type. A component takes in parameters, called props (short for “properties”), and returns a hierarchy of views to display via the render method.',
         description4 : 'The render method returns a description of what you want to see on the screen. React takes the description and displays the result. In particular, render returns a React element, which is a lightweight description of what to render. Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <div /> syntax is transformed at build time to React.createElement("div"). The example above is equivalent to:',
-        code1 : [
+        code4 : [
                     'return React.createElement("div", {className: "shopping-list"}',
                     '   React.createElement("h1", /* ... h1 children ... */)',
                     '   React.createElement("ul", /* ... ul children ... */)',
@@ -178,7 +178,7 @@ export const TutorialContentData = [
         id : 13,
         header1 : 'Making an Interactive Component',
         description : 'Let’s fill the Square component with an “X” when we click it. First, change the button tag that is returned from the Square component’s render() function to this:',
-        code4 : [
+        code : [
             'class Square extends React.Component {',
             '   render() {',
             '       return (',
@@ -207,7 +207,7 @@ export const TutorialContentData = [
         description2 : 'As a next step, we want the Square component to “remember” that it got clicked, and fill it with an “X” mark. To “remember” things, components use state.',
         description3 : 'React components can have state by setting this.state in their constructors. this.state should be considered as private to a React component that it’s defined in. Let’s store the current value of the Square in this.state, and change it when the Square is clicked.',
         description4 : 'First, we’ll add a constructor to the class to initialize the state:',
-        code5 : [
+        code4 : [
             'class Square extends React.Component {',
             '   constructor(props) {',
             '       super(props);',
@@ -286,7 +286,7 @@ export const TutorialContentData = [
         header4 : 'To collect data from multiple children, or to have two child components communicate with each other, you need to declare the shared state in their parent component instead. The parent component can pass the state back down to the children by using props; this keeps the child components in sync with each other and with the parent component.',
         description2 : 'Lifting state into a parent component is common when React components are refactored — let’s take this opportunity to try it out.',
         description3 : 'Add a constructor to the Board and set the Board’s initial state to contain an array of 9 nulls corresponding to the 9 squares:',
-        code7 : [
+        code3 : [
             'class Board extends React.Component {',
             '   constructor(props) {',
             '       super(props);',
@@ -299,7 +299,7 @@ export const TutorialContentData = [
             '   }',
         ],
         description4 : 'When we fill the board in later, the this.state.squares array will look something like this:',
-        code8 : [
+        code4 : [
             '[',
             '   "O", null, "X",',
             '   "X", "X", "O",,',
@@ -307,14 +307,14 @@ export const TutorialContentData = [
             ']'
         ],
         description5 : 'The Board’s renderSquare method currently looks like this:',
-        code9 : [
+        code5 : [
             'renderSquare(i) {',
             '   return <Square value={i} />;',
             '}'
         ],
         description6 : 'In the beginning, we passed the value prop down from the Board to show numbers from 0 to 8 in every Square. In a different previous step, we replaced the numbers with an “X” mark determined by Square’s own state. This is why Square currently ignores the value prop passed to it by the Board.',
         description7 : 'We will now use the prop passing mechanism again. We will modify the Board to instruct each individual Square about its current value ("X", "O", or null). We have already defined the squares array in the Board’s constructor, and we will modify the Board’s renderSquare method to read from it:',
-        code10 : [
+        code7 : [
             'renderSquare(i) {',
             '   return <Square value={this.state.squares[i]} />;',
             '}'
@@ -323,7 +323,7 @@ export const TutorialContentData = [
         description8 : 'Each Square will now receive a value prop that will either be "X", "O", or null for empty squares.',
         description9 : 'Next, we need to change what happens when a Square is clicked. The Board component now maintains which squares are filled. We need to create a way for the Square to update the Board’s state. Since state is considered to be private to a component that defines it, we cannot update the Board’s state directly from Square.',
         description10 : 'Instead, we’ll pass down a function from the Board to the Square, and we’ll have Square call that function when a square is clicked. We’ll change the renderSquare method in Board to:',
-        code11 : [
+        code10 : [
             'renderSquare(i) {',
             '   return (',
             '       <Square',
@@ -367,7 +367,7 @@ export const TutorialContentData = [
         tipHeader : 'Note',
         tipDescription : 'The DOM <button> element’s onClick attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square’s onClick prop or Board’s handleClick method, and the code would work the same. In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.',
         description14 : 'When we try to click a Square, we should get an error because we haven’t defined handleClick yet. We’ll now add handleClick to the Board class:',
-        code13 : [
+        code14 : [
             'class Board extends React.Component {',
             '   constructor(props) {',
             '       super(props);',
@@ -424,13 +424,13 @@ export const TutorialContentData = [
         description : 'In the previous code example, we suggested that you create a copy of the squares array using the slice() method instead of modifying the existing array. We’ll now discuss immutability and why immutability is important to learn.',
         description1 : 'There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.',
         highdescription : 'Data Change with Mutation',
-        code14 : [
+        code1 : [
             "var player = {score: 1, name: 'Jeff'};",
             "player.score = 2;",
             "// Now player is {score: 2, name: 'Jeff'}"
         ],
         highdescription1 : 'Data Change without Mutation',
-        code15 : [
+        code1a : [
             "var player = {score: 1, name: 'Jeff'};",
             "var newPlayer = Object.assign({}, player, {score: 2});",
             "// Now player is unchanged, but newPlayer is {score: 2, name: 'Jeff'}",
@@ -453,7 +453,7 @@ export const TutorialContentData = [
         description : 'We’ll now change the Square to be a function component.',
         description1 : 'In React, function components are a simpler way to write components that only contain a render method and don’t have their own state. Instead of defining a class which extends React.Component, we can write a function that takes props as input and returns what should be rendered. Function components are less tedious to write than classes, and many components can be expressed this way.',
         description2 : 'Replace the Square class with this function:',
-        code16 : [
+        code2 : [
             "function Square(props) {",
             "    return (",
             '       <button className="square" onClick={props.onClick}>',
@@ -472,7 +472,7 @@ export const TutorialContentData = [
         header1 : 'Taking Turns',
         description : 'We now need to fix an obvious defect in our tic-tac-toe game: the “O”s cannot be marked on the board.',
         description1 : 'We’ll set the first move to be “X” by default. We can set this default by modifying the initial state in our Board constructor:',
-        code17 : [
+        code1 : [
             'class Board extends React.Component {',
             '   constructor(props) {',
             '       super(props);',
@@ -483,7 +483,7 @@ export const TutorialContentData = [
             '   }'
         ],
         description2 : 'Each time a player moves, xIsNext (a boolean) will be flipped to determine which player goes next and the game’s state will be saved. We’ll update the Board’s handleClick function to flip the value of xIsNext:',
-        code18 : [
+        code2 : [
             "handleClick(i) {",
             "   const squares = this.state.squares.slice();",
             "   squares[i] = this.state.xIsNext ? 'X' : 'O';",
@@ -495,14 +495,14 @@ export const TutorialContentData = [
         ],
         description3 : 'With this change, “X”s and “O”s can take turns. Try it!',
         description4 : 'Let’s also change the “status” text in Board’s render so that it displays which player has the next turn:',
-        code19 : [
+        code4 : [
             "render() {",
             "const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');",
             "return (",
             "// the rest has not changed"
         ],
         description5 : 'After applying these changes, you should have this Board component:',
-        code20 : [
+        code5 : [
             "class Board extends React.Component {",
             "   constructor(props) {",
             "       super(props);",
@@ -558,7 +558,7 @@ export const TutorialContentData = [
         id : 20,
         header1 : 'Declaring a Winner',
         description : 'Now that we show which player’s turn is next, we should also show when the game is won and there are no more turns to make. Copy this helper function and paste it at the end of the file:',
-        code21 : [
+        code : [
             'function calculateWinner(squares) {',
             '   const lines = [',
             '       [0, 1, 2],',
@@ -581,7 +581,7 @@ export const TutorialContentData = [
         ],
         description1 : "Given an array of 9 squares, this function will check for a winner and return 'X', 'O', or null as appropriate.",
         description2 : 'We will call calculateWinner(squares) in the Board’s render function to check if a player has won. If a player has won, we can display text such as “Winner: X” or “Winner: O”. We’ll replace the status declaration in Board’s render function with this code:',
-        code22 : [
+        code2 : [
             "render() {",
             "   const winner = calculateWinner(this.state.squares);",
             "   let status;",
@@ -594,7 +594,7 @@ export const TutorialContentData = [
             "       // the rest has not changed",
         ],
         description3 : 'We can now change the Board’s handleClick function to return early by ignoring a click if someone has won the game or if a Square is already filled:',
-        code23 : [
+        code3 : [
             "handleClick(i) {",
             "   const squares = this.state.squares.slice();",
             "   if (calculateWinner(squares) || squares[i]) {",
@@ -621,7 +621,7 @@ export const TutorialContentData = [
         description : 'If we mutated the squares array, implementing time travel would be very difficult.',
         description1 : 'However, we used slice() to create a new copy of the squares array after every move, and treated it as immutable. This will allow us to store every past version of the squares array, and navigate between the turns that have already happened.',
         description2 : 'We’ll store the past squares arrays in another array called history. The history array represents all board states, from the first to the last move, and has a shape like this:',
-        code24 : [
+        code2 : [
             "history = [",
             "   // Before first move",
             "   {",
@@ -658,7 +658,7 @@ export const TutorialContentData = [
         description : 'We’ll want the top-level Game component to display a list of past moves. It will need access to the history to do that, so we will place the history state in the top-level Game component.',
         description1 : 'Placing the history state into the Game component lets us remove the squares state from its child Board component. Just like we “lifted state up” from the Square component into the Board component, we are now lifting it up from the Board into the top-level Game component. This gives the Game component full control over the Board’s data, and lets it instruct the Board to render previous turns from the history.',
         description2 : 'First, we’ll set up the initial state for the Game component within its constructor:',
-        code25 : [
+        code2 : [
             'class Game extends React.Component {',
             '   constructor(props) {',
             '       super(props);',
@@ -691,7 +691,7 @@ export const TutorialContentData = [
             '3.Replace this.handleClick(i) with this.props.onClick(i) in Board’s renderSquare.',
         ],
         description4 : 'The Board component now looks like this:',
-        code26 : [
+        code4 : [
             "class Board extends React.Component {",
             "   handleClick(i) {",
             "       const squares = this.state.squares.slice();",
@@ -744,7 +744,7 @@ export const TutorialContentData = [
             "}"
         ],
         description5 : 'We’ll update the Game component’s render function to use the most recent history entry to determine and display the game’s status:',
-        code27 : [
+        code5 : [
             "render() {",
             "   const history = this.state.history;",
             "   const current = history[history.length - 1];",
@@ -772,7 +772,7 @@ export const TutorialContentData = [
             "}"
         ],
         description6 : 'Since the Game component is now rendering the game’s status, we can remove the corresponding code from the Board’s render method. After refactoring, the Board’s render function looks like this:',
-        code28 : [
+        code6 : [
             'render() {',
             '   return (',
             '       <div>',
@@ -796,7 +796,7 @@ export const TutorialContentData = [
             '}'
         ],
         description7 : 'Finally, we need to move the handleClick method from the Board component to the Game component. We also need to modify handleClick because the Game component’s state is structured differently. Within the Game’s handleClick method, we concatenate new history entries onto history.',
-        code29 : [
+        code7 : [
             "handleClick(i) {",
             "   const history = this.state.history;",
             "   const current = history[history.length - 1];",
@@ -830,7 +830,7 @@ export const TutorialContentData = [
         ],
         description3 : 'Using the map method, we can map our history of moves to React elements representing buttons on the screen, and display a list of buttons to “jump” to past moves.',
         description4 : 'Let’s map over the history in the Game’s render method:',
-        code31 : [
+        code4 : [
             "render() {",
             "   const history = this.state.history;",
             "   const current = history[history.length - 1];",
@@ -878,18 +878,18 @@ export const TutorialContentData = [
         header1 : 'Picking a Key',
         discription : 'When we render a list, React stores some information about each rendered list item. When we update a list, React needs to determine what has changed. We could have added, removed, re-arranged, or updated the list’s items.',
         description3 : 'Imagine transitioning from',
-        code32 : [
+        code3 : [
             '<li>Alexa: 7 tasks left</li>',
             '<li>Ben: 5 tasks left</li>'
         ],
         description4 : 'to',
-        code33 : [
+        code4 : [
             '<li>Ben: 9 tasks left</li>',
             '<li>Claudia: 8 tasks left</li>',
             '<li>Alexa: 5 tasks left</li>',
         ],
         description5 : 'In addition to the updated counts, a human reading this would probably say that we swapped Alexa and Ben’s ordering and inserted Claudia between Alexa and Ben. However, React is a computer program and does not know what we intended. Because React cannot know our intentions, we need to specify a key property for each list item to differentiate each list item from its siblings. One option would be to use the strings alexa, ben, claudia. If we were displaying data from a database, Alexa, Ben, and Claudia’s database IDs could be used as keys.',
-        code34 : [
+        code5 : [
             '<li key={user.id}>{user.name}: {user.taskCount} tasks left</li>'
         ],
         description6 : 'When a list is re-rendered, React takes each list item’s key and searches the previous list’s items for a matching key. If the current list has a key that didn’t exist before, React creates a component. If the current list is missing a key that existed in the previous list, React destroys the previous component. If two keys match, the corresponding component is moved. Keys tell React about the identity of each component which allows React to maintain state between re-renders. If a component’s key changes, the component will be destroyed and re-created with a new state.',
@@ -904,7 +904,7 @@ export const TutorialContentData = [
         header1 : 'Implementing Time Travel',
         description : 'In the tic-tac-toe game’s history, each past move has a unique ID associated with it: it’s the sequential number of the move. The moves are never re-ordered, deleted, or inserted in the middle, so it’s safe to use the move index as a key.',
         description1 : 'In the Game component’s render method, we can add the key as <li key={move}> and React’s warning about keys should disappear:',
-        code35 : [
+        code1 : [
             "const moves = history.map((step, move) => {",
             "   const desc = move ?",
             "       'Go to move #' + move :",
@@ -919,7 +919,7 @@ export const TutorialContentData = [
         header3 : 'View the full code at this point',
         description2 : 'Clicking any of the list item’s buttons throws an error because the jumpTo method is undefined. Before we implement jumpTo, we’ll add stepNumber to the Game component’s state to indicate which step we’re currently viewing.',
         description3: 'First, add stepNumber: 0 to the initial state in Game’s constructor:',
-        code36 : [
+        code3 : [
             'class Game extends React.Component {',
             '   constructor(props) {',
             '       super(props);',
@@ -933,7 +933,7 @@ export const TutorialContentData = [
             '   }'
         ],
         description4 : 'Next, we’ll define the jumpTo method in Game to update that stepNumber. We also set xIsNext to true if the number that we’re changing stepNumber to is even:',
-        code37 : [
+        code4 : [
             'handleClick(i) {',
             '   // this method has not changed',
             '}',
@@ -951,7 +951,7 @@ export const TutorialContentData = [
         description6 : 'We will now make a few changes to the Game’s handleClick method which fires when you click on a square.',
         description7 : 'The stepNumber state we’ve added reflects the move displayed to the user now. After we make a new move, we need to update stepNumber by adding stepNumber: history.length as part of the this.setState argument. This ensures we don’t get stuck showing the same move after a new one has been made.',
         description8 : 'We will also replace reading this.state.history with this.state.history.slice(0, this.state.stepNumber + 1). This ensures that if we “go back in time” and then make a new move from that point, we throw away all the “future” history that would now be incorrect.',
-        code38 : [
+        code8 : [
             "handleClick(i) {",
             "   const history = this.state.history.slice(0, this.state.stepNumber + 1);",
             "   const current = history[history.length - 1];",
@@ -970,7 +970,7 @@ export const TutorialContentData = [
             "}",
         ],
         description9 : 'Finally, we will modify the Game component’s render method from always rendering the last move to rendering the currently selected move according to stepNumber:',
-        code39 : [
+        code9 : [
             "render() {",
             "   const history = this.state.history;",
             "   const current = history[this.state.stepNumber];",
