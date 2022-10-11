@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-router-dom";
 import "../SideNavbarAccordion/Accordion.css";
 
 const Accordion = ({ title, content}) => {
@@ -24,9 +25,9 @@ const Accordion = ({ title, content}) => {
         <ul className='docs-side-navbar-list-container'>
           {content.map((each) => (
             <li className="docs-side-navbar-list">
-              <a href="/" className="docs-side-navbar-list-anchor">
+              <Link href="/" className="docs-side-navbar-list-anchor">
                 {each}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
