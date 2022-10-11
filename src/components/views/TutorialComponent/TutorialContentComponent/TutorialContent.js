@@ -226,6 +226,7 @@ export const TutorialContent = () => {
               ) : null}
 
               {item.description4 ? <p>{item.description4}</p> : null}
+
               {item.code4 ? (
                 <code className="tutorial-content-code-container">
                   {item.code4.map((code) => (
@@ -245,9 +246,9 @@ export const TutorialContent = () => {
 
               {item.description5 ? <p>{item.description5}</p> : null}
 
-              {item.highdescription4 ? (
+              {item.highescription4 ? (
                 <p className="tutorial-content-high-description">
-                  {item.highdescription4}
+                  {item.highescription4}
                 </p>
               ) : null}
 
@@ -276,6 +277,7 @@ export const TutorialContent = () => {
                   <h3>{item.header3}</h3>
                 </a>
               ) : null}
+              
               {item.description6 ? <p>{item.description6}</p> : null}
 
               {item.tipwarningheader ? (

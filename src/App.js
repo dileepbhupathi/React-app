@@ -5,6 +5,7 @@ import {Docs} from './components/views/Docs-Component/Docs'
 import { Tutorial } from './components/views/TutorialComponent/Tutorial';
 import {Blog} from "./components/views/Blog-Component/Blog"
 import {Community} from './components/views/CommunityComponent/Community'
+import { NotFound } from './components/views/NotFoundComponent/NotFound';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route exact path = "/tutorial" component={Tutorial}/>
       <Route exact path = "/blog" component={Blog}/>
       <Route exact path= "/community" component = {Community}/>
+      <Route component = {NotFound}/>
       </Switch>
     </BrowserRouter>
   );
