@@ -8,8 +8,8 @@ export const TutorialSideNavbar = () => {
   return(
     <div className='docs-side-navbar-container'>
       {
-        TutorialSiderData.map(({title,content}) =>
-        <Accordion title = {title} content = {content} />
+        TutorialSiderData.map(({title,content,i}) =>
+        <Accordion title = {title} content = {content} i = {i} />
       )}
     </div>
   )

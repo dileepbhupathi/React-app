@@ -6,6 +6,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
 
 .Navbar-logo {
@@ -24,11 +25,11 @@
     padding-top: 3%;
 }
 
-.navbar-list-container {
+.navbar-link-container {
     display: flex;
     list-style: none;
     justify-content: space-evenly;
-    /* width: 40%; */
+    padding-top: 1%;
 }
 
 .navbar-search {
@@ -47,28 +48,31 @@ input {
     font-weight: 300;
 }
 
-.li-container{
+.unselected-link{
     color:white;
-    font-family:sans-serif;
     text-decoration: none;
 }
 
-.selected-li{
+.selected-link{
     color:#61dafb;
-    font-family:sans-serif;
-    text-decoration: underline;
-    /* padding-bottom: 38%;
-    border-bottom: 4px solid #61dafb; */
+    text-decoration: none;
 
 }
 
 
-.navbar-list {
+.selected-navbar-link {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 100;
     margin-right: 25%;
+    border-bottom: 4px solid #61dafb;
 }
 
-.navbar-list :hover {
+.unselected-navbar-link :hover {
     color: #61dafb;
+}
+
+.unselected-navbar-link {
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 25%;
 }

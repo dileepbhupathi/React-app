@@ -7,8 +7,8 @@ export const BlogSide = () => {
   return (
     <div className='docs-side-navbar-container'>
       {
-        BlogSiderData.map(({title,content}) =>
-        <Accordion title = {title} content = {content} />
+        BlogSiderData.map(({title,content,i}) =>
+        <Accordion title = {title} content = {content} i = {i}/>
       )}
     </div>
   )

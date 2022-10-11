@@ -20,28 +20,28 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar-nav-container">
+    <div className="navbar-nav-container">
       <Link className="Navbar-logo">
         <FaReact className="logo" />
         <span>React</span>
       </Link>
-      <ul className="navbar-list-container">
+      <nav className="navbar-link-container">
         {NavbarData.map((item, i) => (
-          <li className="navbar-list">
+          <div className={isActive === i ? "selected-navbar-link" : "unselected-navbar-link"}>
             <Link
               onClick={() => toggle(i)}
-              className={isActive === i ? "selected-li" : "li-container"}
+              className={isActive === i ? "selected-link" : "unselected-link"}
               to={item.link}
             >
               {item.title}
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </nav>
       <span className="navbar-search">
         <BiSearch className="logo" />
         <input type="search" placeholder="Search" />
       </span>
-    </nav>
+    </div>
   );
 };
